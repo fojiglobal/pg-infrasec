@@ -22,6 +22,6 @@
 # /src/utils/** @utils-team
 
 # Specify owners for all files in the repository
-* @fojiglobal/pg-team
+* @fojiglobal/infrasec
 
 # Note: You can also use GitHub teams as owners

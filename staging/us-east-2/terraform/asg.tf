@@ -20,6 +20,7 @@ resource "aws_launch_template" "staging-lt" {
   resource "aws_autoscaling_group" "staging-asg" {
   name = "${var.staging-env}-asg"
   vpc_zone_identifier = [aws_subnet.staging_private_subnet_1.id, aws_subnet.staging_private_subnet_2.id]
+  target_group_arns         = [aws_lb_target_group.staging_tg.arn]
   desired_capacity   = 2
   max_size           = 2
   min_size           = 1
