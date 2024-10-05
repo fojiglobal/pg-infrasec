@@ -7,9 +7,9 @@ terraform {
   }
 
   backend "s3" {
-    bucket = "pg-cs2-terraform"
-    key    = "staging/terraform.tfstate"
-    region = "us-east-2"
+    bucket         = "pg-cs2-terraform"
+    key            = "staging/terraform.tfstate"
+    region         = "us-east-2"
     dynamodb_table = "cs2-infrasec-terraform"
   }
 }
