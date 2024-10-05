@@ -14,7 +14,7 @@ resource "aws_launch_template" "staging-lt" {
     }
   }
 
-  user_data = filebase64("web.sh")
+  user_data = var.user_data
 }
 
   resource "aws_autoscaling_group" "staging-asg" {
